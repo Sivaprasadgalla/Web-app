@@ -1,9 +1,7 @@
 import axios from "axios";
 
-
 export const instance = axios.create({
     baseURL: 'https://dummyjson.com',
-    // withCredentials: true 
 });
 
 // Function to start loader
@@ -42,33 +40,7 @@ const startLoader = () => {
       return response;
     },
     (error) => {
-    // navigate
-      if(error.response){
-        const GlobalError = error.response.data.Message;
-        // alert(GlobalError);
-      }
       stopLoader();
       return Promise.reject(error);
     }
   );
-
-
-// set session cookie
-export function setSessionCookie(){
-    instance.post('/account/users/create-session')
-    .then(res => {
-    }).catch(err => {
-      console.log(err);
-    })
-}
-
-
-   //validate session cookie
- export function validateSessionCookie(){
-    instance.get('/account/users/validate-session')
-    .then(res => {
-      
-    }).catch(err => {
-        setSessionCookie();
-    })
-}

@@ -1,0 +1,307 @@
+/* Absolute Center Spinner */
+#loading {
+  position: fixed;
+  z-index: 999;
+  height: 2em;
+  width: 2em;
+  overflow: show;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* Transparent Overlay */
+#loading:before {
+  content: '';
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+    background: radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0, .8));
+
+  background: -webkit-radial-gradient(rgba(20, 20, 20,.8), rgba(0, 0, 0,.8));
+}
+
+/* :not(:required) hides these rules from IE9 and below */
+#loading:not(:required) {
+  /* hide "loading..." text */
+  font: 0/0 a;
+  color: transparent;
+  text-shadow: none;
+  background-color: transparent;
+  border: 0;
+}
+
+#loading:not(:required):after {
+  content: '';
+  display: block;
+  font-size: 10px;
+  width: 1em;
+  height: 1em;
+  margin-top: -0.5em;
+  -webkit-animation: spinner 150ms infinite linear;
+  -moz-animation: spinner 150ms infinite linear;
+  -ms-animation: spinner 150ms infinite linear;
+  -o-animation: spinner 150ms infinite linear;
+  animation: spinner 150ms infinite linear;
+  border-radius: 0.5em;
+  -webkit-box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
+box-shadow: rgba(255,255,255, 0.75) 1.5em 0 0 0, rgba(255,255,255, 0.75) 1.1em 1.1em 0 0, rgba(255,255,255, 0.75) 0 1.5em 0 0, rgba(255,255,255, 0.75) -1.1em 1.1em 0 0, rgba(255,255,255, 0.75) -1.5em 0 0 0, rgba(255,255,255, 0.75) -1.1em -1.1em 0 0, rgba(255,255,255, 0.75) 0 -1.5em 0 0, rgba(255,255,255, 0.75) 1.1em -1.1em 0 0;
+}
+
+/* Animation */
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-moz-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@-o-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.navbar .navbar-brand {
+  font-size: 30px;
+  color: #fff;
+}
+.navbar .nav-item {
+  padding: 10px 20px;
+}
+.navbar .nav-link {
+  font-size: 20px;
+  margin-left: 10px;
+  color: #007bff;
+}
+
+/* modal */
+
+/* styles.css */
+.modal {
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; 
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; 
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  }
+.btn.btn-primary {
+  max-width: 16%;
+  }
+.add-product.btn.btn-primary{max-width: 50%;}
+.form-control {
+  max-width: 50%;
+  margin-bottom: 1rem;
+  padding: 12px 15px;
+}
+
+/* products */
+.product-list {
+  padding: 20px 10px 20px;
+  font-family: 'Nunito Sans', sans-serif;
+}
+.product-list>ul {
+  margin: 0 -10px;
+  padding: 0;
+  list-style: none;
+  display: flex;
+}
+.product-list>ul>li {
+  width: 25%;
+  padding: 10px;
+}
+.white-box {
+  border-radius: 5px;
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.4);
+  background-color: #ffffff;
+  padding: 35px 20px;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  margin-bottom: 20px;
+}
+.product-img {
+  min-height: 135px;
+}
+.product-img svg {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #0d6efd;
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+.product-img img {
+  max-width: 100%;
+  max-height: 130px;
+  display: block;
+  margin: 0 auto;
+}
+.product-bottom {
+  text-align: center;
+}
+.product-name {
+  font-size: 16px;
+  color: #666;
+  text-align: center;
+  margin: 10px 0 0px;
+  font-weight: 600;
+  max-height: 48px;
+  min-height: 48px;
+  overflow: hidden;
+}
+.price {
+  margin-top: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
+}
+.blue-btn {    
+background: #13cfdf;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  padding: 0 15px;
+  cursor: pointer;
+  height: 30px;
+  line-height: 30px;
+  max-width: 132px;
+  margin: 10px auto 0;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+.price .line-through {
+  font-size: 14px;
+  color: #999999;
+  font-weight: 400;
+  vertical-align: 1px;
+  display: inline-block;
+  text-decoration: line-through;
+  margin-left: 4px;
+}
+
+.product-detail {
+  margin-top: 50px;
+}
+.product-detail .product-img {
+  height: auto;
+  margin-top: 0px;
+}
+.product-detail .product-img img{
+  max-height: 100%;
+}
+
+/* pagination */
+/* styles.css */
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination button {
+  margin: 0 5px;
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+.pagination button.active {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+
+}
